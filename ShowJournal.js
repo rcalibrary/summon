@@ -1,4 +1,4 @@
-$('head').append('<link rel="stylesheet" href="https://iainrca.github.io/summon/ShowJournal.css" type="text/css" />');	
+$('head').append('<link rel="stylesheet" href="https://rcalibrary.github.io/summon/ShowJournal.css" type="text/css" />');	
 $('div#rightPane div.customSections li h3[ng-bind="::section.title"]').filter(function(index){ return $(this).text()=="Journal & Book"}).parent(".content").css("display","none");
 setTimeout(function() {
 		callAtoZ();
