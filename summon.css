@@ -1,0 +1,73 @@
+body {
+	font-family:"Benton Sans Light", "BentonSans-Light", "Benton Sans Medium", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+}
+.availabilityLink:hover, a:hover, .btn-link:hover, button.actionBtn.ng-isolate-scope:hover, button.actionBtn.ng-scope:hover {
+	color:#ff5d1c!important;
+}
+.availabilityContent.availability.documentSummaryAvailability .availabilityLink{
+	text-decoration:none!important;
+}
+.availabilityLink{
+	color:#0066cc!important;
+}
+.btn-default {
+	background-color:#000!important;
+}
+.logo {
+	/*width: 45%;*/
+	/*max-height: 45px;*/
+	margin-left: 20px;
+}
+/*link of injected text */
+.availabilityContent.availability.documentSummaryAvailability a {
+	color:#0066cc!important;
+}
+
+.availabilityContent.availability.documentSummaryAvailability a:hover {
+	color:#ff5d1c!important;
+}
+
+/*hide Language Option from Menu */
+.languageSwitcher {
+	display:none;
+}
+/*someone appears to be messing with our css a bit, so am changing the facets background to white */
+body .moreFacetsContainer {
+	background-color:#fff!important;
+}
+/*see if we can remove the custom links from appearing when on ip address range or vpn on mobile*/
+@media (max-width: 800px) {
+.list-inline {
+	display:none;
+}
+."::i18n.translations.CLEAR_FILTERS" {
+  color:red !important;
+  }
+/*hide new Quick Look button*/	
+
+.quick-look-button.hidden-xs {
+	display:none!important;
+	}
+	
+/* hide first element in burger menu */
+	
+/* #list-unstyled > li:first-child{
+   visibility: hidden;
+}*/
+	
+
+/* Change Facet and Third Panel button background colour*/
+ .uxf-right-open {
+	 color:#000!important;
+}
+
+.uxf-left-open {
+	color:#000!important;
+	}
+.facetMenuToggle.btn {
+	border:none;
+	}
+	
+.thirdPanelMenuToggle.btn {
+	border:none;
+	}
