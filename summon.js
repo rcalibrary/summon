@@ -94,8 +94,8 @@ $(document).ready(function() {
 		     // skip as link already exists
 		  }
 		  else {
-                     //$( "<span id='shelfmap'><a href='https://app.shelfmap.co.uk/fp/fp?icode=44RCA&id=" + bibid + "' target='_blank' class='ShelfMap_anchor' title='Show item on ShelfMap'><img src='https://iainrca.github.io/summon/v2.svg' alt='ShelMap drop pin' height = '75px' width='75px'/>View Shelf Location</a></span></br>").insertAfter( $(this).find('div.ng-scope') );		
-                     $( $(this).find('div.ng-scope') ).append( "<span id='shelfmap'><a href='https://app.shelfmap.co.uk/fp/fp?icode=44RCA&id=" + bibid + "' target='_blank' class='ShelfMap_anchor' title='Show item on ShelfMap'><img src='https://iainrca.github.io/summon/v2.svg' alt='ShelMap drop pin' height = '75px' width='75px'/>View Shelf Location</a></span></br>" );			  
+                     //$( "<span id='shelfmap'><a href='https://app.shelfmap.co.uk/fp/fp?icode=44RCA&id=" + bibid + "' target='_blank' class='ShelfMap_anchor' title='Show item on ShelfMap'><img src='https://rcalibrary.github.io/summon/v2.svg' alt='ShelMap drop pin' height = '75px' width='75px'/>View Shelf Location</a></span></br>").insertAfter( $(this).find('div.ng-scope') );		
+                     $( $(this).find('div.ng-scope') ).append( "<span id='shelfmap'><a href='https://app.shelfmap.co.uk/fp/fp?icode=44RCA&id=" + bibid + "' target='_blank' class='ShelfMap_anchor' title='Show item on ShelfMap'><img src='https://rcalibrary.github.io/summon/v2.svg' alt='ShelMap drop pin' height = '75px' width='75px'/>View Shelf Location</a></span></br>" );			  
 		  }			  
                }
 			if(validSPLocs.indexOf(Loc) !== -1) {
