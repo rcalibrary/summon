@@ -76,7 +76,7 @@ $(document).ready(function() {
 	  //console.log($(this).find('div.ng-scope a.summonBtn').attr('title'));	  
 		  
 		  var bibid = $(this).closest($('div.documentSummary')).attr('id').replace(/FETCH-rca_catalog_u/g,'').replace(/.$/,'');	  	  	  	  
-		  var validSMLocs=["ONSHELF","REFERENCE","PER_CURR","OVERSIZE","EAP","DYSLEXIA","FUELRCA","CRLCC","STUDYROOM"];
+	//	  var validSMLocs=["ONSHELF","REFERENCE","PER_CURR","OVERSIZE","EAP","DYSLEXIA","FUELRCA","CRLCC","STUDYROOM"];
 		  var validSPLocs=["CRL","SPECCOLL","ARC","AB","OFFSITE"];
 		  var validEQLocs=["PER_NONC","PER_RES","THESES","STACK","STORE","JR","CATALOGING","IP","BIN","BOUT","QR","PAMPHLET","FLTV"];
           //var LocArr = $(this).find('div.ng-scope .summonBtn').attr('title').split(','); 
@@ -84,20 +84,20 @@ $(document).ready(function() {
 	  var LocArr = $(this).find('div.ng-scope .summonBtn').attr('title').split(',');
           var Loc = LocArr[0].replace(/[\s\n]+/g,'');
                    console.log(Loc);
-			if(validSMLocs.indexOf(Loc) !== -1) {
+	//		if(validSMLocs.indexOf(Loc) !== -1) {
 	     // get bib id and append shelfmap url/link				
 		  //console.log($(this).find('div.ng-scope a.summonBtn').siblings('span#shelfmap'));		  				
 		  //if($(this).siblings('span#shelfmap').length) {
 		  //if($(this).find('div.ng-scope .summonBtn').siblings('span#shelfmap').length) {
 		  //if($(this).find('div.ng-scope .availabilityLink').siblings('span#shelfmap').length) {
-		  if($(this).find('div.ng-scope .summonBtn').parent().parent().siblings('span#shelfmap').length) {
+	//	  if($(this).find('div.ng-scope .summonBtn').parent().parent().siblings('span#shelfmap').length) {
 		     // skip as link already exists
-		  }
-		  else {
+	//	  }
+	//	  else {
                      //$( "<span id='shelfmap'><a href='https://app.shelfmap.co.uk/fp/fp?icode=44RCA&id=" + bibid + "' target='_blank' class='ShelfMap_anchor' title='Show item on ShelfMap'><img src='https://rcalibrary.github.io/summon/v2.svg' alt='ShelMap drop pin' height = '75px' width='75px'/>View Shelf Location</a></span></br>").insertAfter( $(this).find('div.ng-scope') );		
-                     $( $(this).find('div.ng-scope') ).append( "<span id='shelfmap'><a href='https://app.shelfmap.co.uk/fp/fp?icode=44RCA&id=" + bibid + "' target='_blank' class='ShelfMap_anchor' title='Show item on ShelfMap'><img src='https://rcalibrary.github.io/summon/v2.svg' alt='ShelMap drop pin' height = '75px' width='75px'/>View Shelf Location</a></span></br>" );			  
-		  }			  
-               }
+         //            $( $(this).find('div.ng-scope') ).append( "<span id='shelfmap'><a href='https://app.shelfmap.co.uk/fp/fp?icode=44RCA&id=" + bibid + "' target='_blank' class='ShelfMap_anchor' title='Show item on ShelfMap'><img src='https://rcalibrary.github.io/summon/v2.svg' alt='ShelMap drop pin' height = '75px' width='75px'/>View Shelf Location</a></span></br>" );			  
+	//	  }			  
+         //      }
 			if(validSPLocs.indexOf(Loc) !== -1) {
 		// add link to special collections booking form 
 				if($(this).find('div.ng-scope .summonBtn').parent().parent().siblings('div#specialcol').length) {
