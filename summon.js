@@ -8,7 +8,8 @@
         link.rel = 'stylesheet';  
       
         link.type = 'text/css'; 
-      
+      // link to the css file for summon
+
         link.href = 'https://rcalibrary.github.io/summon/summon.css';  
   
         // Append link element to HTML head 
@@ -54,9 +55,9 @@ $(document).ready(function() {
 
  function AppendToHoldings() {
 
-         console.log("Enters Append");
-	 console.log($('div.availabilityRta').length);
-	 console.log($('div.availabilityRta'));
+         //console.log("Enters Append");
+	 //console.log($('div.availabilityRta').length);
+	 //console.log($('div.availabilityRta'));
          //check div.availabilityInfo exists before proceeding to check if elements need adding
 	 var checkExist = setInterval(function() {
          if ($('div.availabilityRta').length) {
