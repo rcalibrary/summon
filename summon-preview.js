@@ -72,9 +72,6 @@ $(document).ready(function() {
 	  console.log("cleared");	 
 	 
           $('div.availabilityRta').each(function () {
-          //console.log($(this));		  
-          //console.log($(this).querySelector('div.ng-scope a.summonBtn').getAttribute('title')); 		            
-	  //console.log($(this).find('div.ng-scope a.summonBtn').attr('title'));	  
 		  
 		  var bibid = $(this).closest($('div.documentSummary')).attr('id').replace(/FETCH-rca_catalog_u/g,'').replace(/.$/,'');	  	  	  	  
 		  var validSPLocs=["CRL","SPECCOLL","ARC","AB","OFFSITE"];
