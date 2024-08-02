@@ -74,7 +74,7 @@ $(document).ready(function() {
           $('div.availabilityRta').each(function () {
 		  
 		  var bibid = $(this).closest($('div.documentSummary')).attr('id').replace(/FETCH-rca_catalog_u/g,'').replace(/.$/,'');	  	  	  	  
-		  var validSPLocs=["CRL","SPECCOLL","ARC","AB","OFFSITE"];
+		  var validSPLocs=["CRL","SPECCOLL","ARC","ARTISTBOOK","OFFSITE"];
 		  var validEQLocs=["PER_NONC","PER_RES","THESES","STACK","STORE","JR","CATALOGING","IP","BIN","BOUT","PAMPHLET","QR"];
           //var LocArr = $(this).find('div.ng-scope .summonBtn').attr('title').split(','); 
 	  var LocArr = $(this).find('div.ng-scope .summonBtn').attr('title').split(',');
