@@ -77,7 +77,7 @@ $(document).ready(function() {
 	  //console.log($(this).find('div.ng-scope a.summonBtn').attr('title'));	  
 		  
 		  var bibid = $(this).closest($('div.documentSummary')).attr('id').replace(/FETCH-rca_catalog_u/g,'').replace(/.$/,'');	  	  	  	  
-		  var validSPLocs=["CRL","SPECCOLL","ARC","AB","OFFSITE"];
+		  var validSPLocs=["CRL","SPECCOLL","ARC","ARTISTBOOK","OFFSITE"];
 		  var validEQLocs=["PER_NONC","PER_RES","THESES","STACK","STORE","JR","CATALOGING","IP","BIN","BOUT","QR","PAMPHLET","FLTV"];
           //var LocArr = $(this).find('div.ng-scope .summonBtn').attr('title').split(','); 
           //console.log($(this).find('div.ng-scope .summonBtn'));		  
