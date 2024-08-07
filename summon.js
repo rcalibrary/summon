@@ -27,7 +27,7 @@
 
 //remove quick look button
 
-$('body').append('<style>.quick-look-button{ display: none !important; }</style>')
+//$('body').append('<style>.quick-look-button{ display: none !important; }</style>')
 
 
 /* code to run the following function only when the rta results are back*/
