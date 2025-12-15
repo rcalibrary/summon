@@ -31,7 +31,7 @@
 
 
 /* code to run the following function only when the rta results are back*/
-
+/*commented out as of 15/12/25 because it caused the RTA and Summon to become unresponsive. 
 
 $(document).ready(function() {
     const domObserver = new MutationObserver((mutationList) => {
@@ -50,8 +50,13 @@ $(document).ready(function() {
 //  rootScope.$on('apiSuccess', (scope) => setTimeout(AppendToHoldings, 3000))
 });
 
+*/
 
 /*function to append text to records where the RTA Location Code requires users to do something*/
+
+/*commented out as of 15/12/25 because it caused the RTA and Summon to become unresponsive.
+The Summon team suggested edits to the code (see support ticket) but didn't fix the duplication of appended text
+Investigate further at a future date
 
  function AppendToHoldings() {
 
@@ -123,7 +128,7 @@ $(document).ready(function() {
    });
  }
 
- 
+ commented out function to append text to records where the RTA Location Code requires users to do something. See above */
 
 /* Adding additional Custom Links to Summon.*/
 
