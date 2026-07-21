@@ -154,15 +154,11 @@ angular.module('summonApp')
          href: "https://rca.libguides.com/suggestions",
          label: "Suggest a Book"
      }
-      config.data.links.custom6 = {
-         href: "https://rca.libguides.com/suggestions/ill",
-         label: "Inter-library Loans"
-     }
-       config.data.links.custom7 = {
+       config.data.links.custom6 = {
          href: "https://library.rca.ac.uk/client/en_GB/2015/search/patronlogin/http:$002f$002flibrary.rca.ac.uk$002fclient$002fen_GB$002fsummon$002fsearch$002faccount$002f1$003f",
          label: "Library Account"
      }        
-        config.data.links.custom8 = {
+        config.data.links.custom7 = {
          href: "https://rca.libguides.com/alumniaccess",
          label: "External Visitors"
      }                
