@@ -8,29 +8,30 @@
         link.rel = 'stylesheet';  
       
         link.type = 'text/css'; 
-      
+      // link to the css file for summon
+
         link.href = 'https://rcalibrary.github.io/summon/summon-preview.css';  
   
         // Append link element to HTML head 
         document.head.appendChild(link);
-	
 
-  $('body').append('<style>.languageMenuButton { display: none !important; }</style>');
+  $('body').append('<style>.languageMenuButton { display: none !important; }</style>')
 
 // remove top links from displaying when user is on campus
 
- $('body').append('<style>.list-inline { display: none !important; }</style>');
+ $('body').append('<style>.list-inline { display: none !important; }</style>')
 
 // remove Feedback from list of options
 
-//$('body').append('<style>.list-unstyled ul > li:first-child{ display: none;}</style>');
+//$('body').append('<style>.list-unstyled ul > li:first-child{ display: none;}</style>')
 
 //remove quick look button
 
-//$('body').append('<style>.quick-look-button{ display: none !important; }</style>');
+//$('body').append('<style>.quick-look-button{ display: none !important; }</style>')
+
 
 /* code to run the following function only when the rta results are back*/
-
+/*commented out as of 15/12/25 because it caused the RTA and Summon to become unresponsive. 
 
 $(document).ready(function() {
     const domObserver = new MutationObserver((mutationList) => {
@@ -49,15 +50,19 @@ $(document).ready(function() {
 //  rootScope.$on('apiSuccess', (scope) => setTimeout(AppendToHoldings, 3000))
 });
 
-
+*/
 
 /*function to append text to records where the RTA Location Code requires users to do something*/
 
+/*commented out as of 15/12/25 because it caused the RTA and Summon to become unresponsive.
+The Summon team suggested edits to the code (see support ticket) but didn't fix the duplication of appended text
+Investigate further at a future date
+
  function AppendToHoldings() {
 
-         console.log("Enters Append");
-	 console.log($('div.availabilityRta').length);
-	 console.log($('div.availabilityRta'));
+         //console.log("Enters Append");
+	 //console.log($('div.availabilityRta').length);
+	 //console.log($('div.availabilityRta'));
          //check div.availabilityInfo exists before proceeding to check if elements need adding
 	 var checkExist = setInterval(function() {
          if ($('div.availabilityRta').length) {
@@ -72,24 +77,25 @@ $(document).ready(function() {
 	  console.log("cleared");	 
 	 
           $('div.availabilityRta').each(function () {
+          //console.log($(this));		  
+          //console.log($(this).querySelector('div.ng-scope a.summonBtn').getAttribute('title')); 		            
+	  //console.log($(this).find('div.ng-scope a.summonBtn').attr('title'));	  
 		  
 		  var bibid = $(this).closest($('div.documentSummary')).attr('id').replace(/FETCH-rca_catalog_u/g,'').replace(/.$/,'');	  	  	  	  
 		  var validSPLocs=["CRL","SPECCOLL","ARC","ARTISTBOOK","OFFSITE"];
-		  var validEQLocs=["PER_NONC","PER_RES","THESES","STACK","STORE","JR","CATALOGING","IP","BIN","BOUT","PAMPHLET","QR"];
+		  var validEQLocs=["PER_NONC","PER_RES","THESES","STACK","STORE","JR","CATALOGING","IP","BIN","BOUT","QR","PAMPHLET","FLTV"];
           //var LocArr = $(this).find('div.ng-scope .summonBtn').attr('title').split(','); 
+          //console.log($(this).find('div.ng-scope .summonBtn'));		  
 	  var LocArr = $(this).find('div.ng-scope .summonBtn').attr('title').split(',');
           var Loc = LocArr[0].replace(/[\s\n]+/g,'');
                    console.log(Loc);
 			if(validSPLocs.indexOf(Loc) !== -1) {
-		// add link to special collections booking form 
+		// add link to special collections email
 				if($(this).find('div.ng-scope .summonBtn').parent().parent().siblings('div#specialcol').length) {
 		     // skip as link already exists
 				}
-				else {
-					//$( $(this).find('div.ng-scope') ).append( "<div id='specialcol'><em>Item in Special Collections - access by <a href='https://rca.libguides.com/c.php?g=690477&p=4946847&preview=c35121341496a0c2f17dc536ffd730d5' target='_blank'>appointment</a></em></div></br>" );
-				   //$( "<div id='specialcol'><em>Item in Special Collections - access by <a href='https://rca.libguides.com/c.php?g=690477&p=4946847&preview=c35121341496a0c2f17dc536ffd730d5' target='_blank'>appointment</a></em></div></br>" ).insertAfter( $(this) );        
-				 // $( "<div id='specialcol'><em>Access by appointment: please email <a href='mailto:special-collections@rca.ac.uk' target='_blank'>special-collections@rca.ac.uk</a> to arrange</em></div></br>" ).insertAfter( $(this) );  
-				$( $(this).find('div.ng-scope') ).append( "<div id='specialcol'><em>Access by appointment: please email <a href='mailto:special-collections@rca.ac.uk' target='_blank'>special-collections@rca.ac.uk</a> to arrange</em></div></br>" );
+				else {	
+					$( $(this).find('div.ng-scope') ).append( "<div id='specialcol'><em>Access by appointment: please email <a href='mailto:special-collections@rca.ac.uk' target='_blank'>special-collections@rca.ac.uk</a> to arrange</em></div></br>" );
 				} 
 			}
 			if(validEQLocs.indexOf(Loc) !== -1) {
@@ -102,7 +108,7 @@ $(document).ready(function() {
 			   } 
 			}
             else if (Loc == 'PER_CURR') {
-		// add link to point to journals room - is this necessary now with shelfmap?
+		// add link to point to journals room
 						if($(this).find('div.ng-scope .summonBtn').parent().parent().siblings('div#specialcol').length) {
 		     // skip as link already exists
 				}
@@ -110,7 +116,7 @@ $(document).ready(function() {
 				   $( $(this).find('div.ng-scope') ).append( "<div id='specialcol'><em>Latest Issue in Journals Room</em></br></div>" );
 	    } 
 			}
-            else if (Loc == 'STORECW') {
+	    else if (Loc == 'STORECW') {
 		// add link for store content warning
 						if($(this).find('div.ng-scope .summonBtn').parent().parent().siblings('div#specialcol').length) {
 		     // skip as link already exists
@@ -118,11 +124,11 @@ $(document).ready(function() {
 				else {
 				   $( $(this).find('div.ng-scope') ).append( "<div id='specialcol'><em>Content warning: this item contains harmful and discriminatory language/imagery<br>In storage: place reservation/ask at Library Desk</em></br></div>" );
 	    } 
-			}	   	  
+			}	   			  
    });
  }
 
- 
+ commented out function to append text to records where the RTA Location Code requires users to do something. See above */
 
 /* Adding additional Custom Links to Summon.*/
 
@@ -145,11 +151,11 @@ angular.module('summonApp')
          label: "Library Moodle"
      }
      config.data.links.custom5 = {
-         href: "https://rca.libguides.com/c.php?g=688796&p=4929377&preview=95943e5b520b75b578fafbc6ff01919f",
+         href: "https://rca.libguides.com/suggestions",
          label: "Suggest a Book"
      }
       config.data.links.custom6 = {
-         href: "https://rca.libguides.com/c.php?g=688796&p=4929379&preview=95943e5b520b75b578fafbc6ff01919f",
+         href: "https://rca.libguides.com/suggestions/ill",
          label: "Inter-library Loans"
      }
        config.data.links.custom7 = {
