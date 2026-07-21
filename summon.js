@@ -142,27 +142,23 @@ angular.module('summonApp')
         href: "http://qh7vn5wm4q.search.serialssolutions.com/",
         label: "E-Journals A-Z"
      }
-     config.data.links.custom3 = {
-         href: "https://researchonline.rca.ac.uk/",
-         label: "RCA Research Online"
+	config.data.links.custom3 = {
+        href: "https://rca.libguides.com/printjournals/home",
+        label: "Print Journals"
      }
      config.data.links.custom4 = {
-         href: "https://moodle.rca.ac.uk/course/view.php?id=9",
-         label: "Library Moodle"
+         href: "https://researchonline.rca.ac.uk/",
+         label: "RCA Research Online"
      }
      config.data.links.custom5 = {
          href: "https://rca.libguides.com/suggestions",
          label: "Suggest a Book"
      }
-      config.data.links.custom6 = {
-         href: "https://rca.libguides.com/suggestions/ill",
-         label: "Inter-library Loans"
-     }
-       config.data.links.custom7 = {
+       config.data.links.custom6 = {
          href: "https://library.rca.ac.uk/client/en_GB/2015/search/patronlogin/http:$002f$002flibrary.rca.ac.uk$002fclient$002fen_GB$002fsummon$002fsearch$002faccount$002f1$003f",
-         label: "My Account"
+         label: "Library Account"
      }        
-        config.data.links.custom8 = {
+        config.data.links.custom7 = {
          href: "https://rca.libguides.com/alumniaccess",
          label: "External Visitors"
      }                
